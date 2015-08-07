@@ -2,7 +2,7 @@
 lock '3.4.0'
 
 set :application, 'ex_seats'
-set :repo_url, 'git@example.com:akiyoshi83/ex_seats.git'
+set :repo_url, 'git@github.com:akiyoshi83/ex_seats.git'
 
 # Default branch is :master
 set :branch, ENV["REVISION"] || ENV["BRANCH_NAME"]
