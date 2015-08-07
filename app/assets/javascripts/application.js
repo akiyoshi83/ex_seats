@@ -13,6 +13,4 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
-//= require peek
-//= require peek/views/rblineprof
 //= require_tree .
