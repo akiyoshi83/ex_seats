@@ -38,4 +38,25 @@ Rails.application.configure do
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
+
+  # rails-flog
+  # If this value is true, not format on cached query
+  config.ignore_cached_query = false
+  # If query duration is under this value, not format
+  config.query_duration_threshold = 2.0
+  # If key count of parameters is under this value, not format
+  config.params_key_count_threshold = 2
+  # If this value is true, nested Hash parameter is formatted coercively in any situation
+  config.force_on_nested_params = false
+
+  config.after_initialize do
+    Bullet.enable = true
+    Bullet.alert = true
+    Bullet.bullet_logger = true
+    Bullet.console = true
+    Bullet.rails_logger = true
+  end
+
+  ActiveRecord::Cause.log_with_sql = true
+  ActiveRecord::Cause.log_mode = :all
 end
